@@ -25,6 +25,12 @@ app.post('/create', (req, res) => {
         res.redirect('/');
     })
 });
+app.get('/files/:filename', (req, res) => {
+   fs.readFile(`./files/${req.params.filename}` , "utf-8" , (err , fileData) => {
+    res.render("show" , {filename : req.params.filename , fileData : fileData});
+    
+   })
+});
 
 // listen server
 app.listen(port, () => {

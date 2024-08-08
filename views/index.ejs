@@ -20,7 +20,7 @@
                     <% files.forEach((val) => { %>
                         <div class="task min-w-72 px-3 py-4 bg-zinc-800 rounded-md">
                             <h1 class="text-white text-3xl tracking-tighter"><%= val %></h1>
-                            <p class="text-[#94a3b8] inline-block" href="#"><%= val %></p>
+                            <a class="text-[#94a3b8] inline-block" href="/files/<%=val%>">Read More</a>
                         </div>
                     <% }); %>
                 <% } else { %>
